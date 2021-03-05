@@ -1,5 +1,6 @@
 from .base_model import BaseModel
 from . import networks
+from torchvision import transforms
 
 
 class TestModel(BaseModel):
@@ -60,9 +61,20 @@ class TestModel(BaseModel):
         self.real = input['A'].to(self.device)
         self.image_paths = input['A_paths']
 
-    def forward(self):
-        """Run forward pass."""
+    def forward(self,index):
+        """Run forward pass."""   
+         
+        pil_to_tensor = self.real.cpu()
+        tensor_to_pil = transforms.ToPILImage()(pil_to_tensor.squeeze_(0))
+        tensor_to_pil.save('./datasets/chair_pix2pix/test_3real/real%s.jpg'%index)
+        #print('test_3real/real%s.jpg'%index)
         self.fake = self.netG(self.real)  # G(real)
+
+        pil_to_tensor = self.fake.cpu()
+        tensor_to_pil = transforms.ToPILImage()(pil_to_tensor.squeeze_(0))
+        tensor_to_pil.save('./datasets/chair_pix2pix/test_4fake/fake%s.jpg'%index)
+        #print('test_4fake/fake%s.jpg'%index)
+
 
     def optimize_parameters(self):
         """No optimization for test model."""

@@ -95,14 +95,14 @@ class BaseModel(ABC):
                 net = getattr(self, 'net' + name)
                 net.eval()
 
-    def test(self):
+    def test(self,index):
         """Forward function used in test time.
 
         This function wraps <forward> function in no_grad() so we don't save intermediate steps for backprop
         It also calls <compute_visuals> to produce additional visualization results
         """
         with torch.no_grad():
-            self.forward()
+            self.forward(index)
             self.compute_visuals()
 
     def compute_visuals(self):
@@ -151,10 +151,14 @@ class BaseModel(ABC):
             if isinstance(name, str):
                 save_filename = '%s_net_%s.pth' % (epoch, name)
                 save_path = os.path.join(self.save_dir, save_filename)
+                #save_filename_onnx = '%s_net_%s.onnx' % (epoch, name)
+                #save_path_onnx = os.path.join(self.save_dir, save_filename_onnx)
+                #inputs = torch.randn(1, 3, 256, 256)
                 net = getattr(self, 'net' + name)
 
                 if len(self.gpu_ids) > 0 and torch.cuda.is_available():
                     torch.save(net.module.cpu().state_dict(), save_path)
+                    #torch.onnx.export(net.module, inputs, save_path_onnx, opset_version=7)
                     net.cuda(self.gpu_ids[0])
                 else:
                     torch.save(net.cpu().state_dict(), save_path)
@@ -197,6 +201,12 @@ class BaseModel(ABC):
                 for key in list(state_dict.keys()):  # need to copy keys here because we mutate in loop
                     self.__patch_instance_norm_state_dict(state_dict, net, key.split('.'))
                 net.load_state_dict(state_dict)
+                #net = getattr(self, 'net' + name)
+                #net.eval()
+                #save_filename_onnx = '%s_net_%s_6channel.onnx' % (epoch, name)
+                #save_path_onnx = os.path.join(self.save_dir, save_filename_onnx)
+                #inputs = torch.randn(1, 3, 256, 256).cuda()
+                #torch.onnx.export(net.cuda(), inputs, save_path_onnx, training = 0, opset_version=7)
 
     def print_networks(self, verbose):
         """Print the total number of parameters in the network and (if verbose) network architecture

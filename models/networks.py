@@ -3,6 +3,9 @@ import torch.nn as nn
 from torch.nn import init
 import functools
 from torch.optim import lr_scheduler
+from numpy import random
+from torchvision import transforms
+import time
 
 
 ###############################################################################
@@ -529,6 +532,13 @@ class UnetSkipConnectionBlock(nn.Module):
         self.model = nn.Sequential(*model)
 
     def forward(self, x):
+        #print(".............UnetSkipConnectionBlock forward")
+
+        #pil_to_tensor = x.cpu()
+        #tensor_to_pil = transforms.ToPILImage()(pil_to_tensor.squeeze_(0))
+        #saveTime = time.time()
+        #tensor_to_pil.save('./datasets/chair_pix2pix/test_net/net%s.jpg' % saveTime)
+        #print('test_net/net%s.jpg' % saveTime)
         if self.outermost:
             return self.model(x)
         else:   # add skip connections

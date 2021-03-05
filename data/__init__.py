@@ -55,8 +55,8 @@ def create_dataset(opt):
         >>> dataset = create_dataset(opt)
     """
     data_loader = CustomDatasetDataLoader(opt)
-    dataset = data_loader.load_data()
-    return dataset
+    #dataset = data_loader.load_data()
+    return data_loader
 
 
 class CustomDatasetDataLoader():
