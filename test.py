@@ -32,6 +32,7 @@ from data import create_dataset
 from models import create_model
 from util.visualizer import save_images
 from util import html
+from util import util
 import torch
 from torchvision import transforms
 
@@ -73,7 +74,8 @@ if __name__ == '__main__':
         visuals = model.get_current_visuals()  # get image results
         pil_to_tensor = visuals['fake'].cpu()
         tensor_to_pil = transforms.ToPILImage()(pil_to_tensor.squeeze_(0))
-        tensor_to_pil.save('./datasets/chair_pix2pix/test_6result/fake%s.jpg' % i)
+        im = util.tensor2im(tensor_to_pil)
+        util.save_progress_image("./datasets/{}/test_6result/".format(opt.name), im, i)
         img_path = model.get_image_paths()     # get image paths
         if i % 5 == 0:  # save images to an HTML file
             print('processing (%04d)-th image... %s' % (i, img_path))

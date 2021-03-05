@@ -64,6 +64,13 @@ def save_image(image_numpy, image_path, aspect_ratio=1.0):
     image_pil.save(image_path)
 
 
+def save_progress_image(path,img,index):
+
+    print('save {}/img{}.jpg'.format(path, index))
+    mkdir(path)
+    img.save('{}/img{}.jpg'.format(path, index))
+
+
 def print_numpy(x, val=True, shp=False):
     """Print the mean, min, max, median, std, and size of a numpy array
 

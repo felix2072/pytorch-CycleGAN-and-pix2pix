@@ -64,7 +64,6 @@ python test.py --name coco_pretrained --dataset_mode coco --dataroot .\datasets\
 python test.py --name CamVid --dataset_mode custom --no_instance --label_nc 32 --preprocess_mode scale_width --label_dir datasets/CamVid/val_label --image_dir datasets\CamVid\val_img --load_size 512 --aspect_ratio 1.3333 --crop_size 512 --ngf 48
 python train.py --name CamVid --dataset_mode custom --no_instance --label_nc 32 --preprocess_mode scale_width --label_dir datasets/CamVid/train_label --image_dir datasets/CamVid/train_img/ --load_size 512 --aspect_ratio 1.3333 --crop_size 512 --ngf 48 --ndf 48 --batchSize 1 --niter 50 --niter_decay 50 --tf_log 
 
-'''
 
 #not working onnx export
 import torch.onnx
@@ -79,7 +78,6 @@ def save_network(net, label, epoch, opt):
         inputs = torch.randn(768, 32, 3, 3)
         torch.onnx.export(net.cuda(), inputs.cuda(), save_path)
 
-'''
 
 conda -> python3.6 env
 ---------------------------------------

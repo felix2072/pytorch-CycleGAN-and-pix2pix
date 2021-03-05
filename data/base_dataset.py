@@ -28,6 +28,7 @@ class BaseDataset(data.Dataset, ABC):
         """
         self.opt = opt
         self.root = opt.dataroot
+        self.dataset_root = opt.dataroot[:-6]
 
     @staticmethod
     def modify_commandline_options(parser, is_train):
@@ -109,6 +110,7 @@ def get_transform(opt, params=None, grayscale=False, method=Image.BICUBIC, conve
             transform_list += [transforms.Normalize((0.5,), (0.5,))]
         else:
             transform_list += [transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))]
+    print(transforms)
     return transforms.Compose(transform_list)
 
 
