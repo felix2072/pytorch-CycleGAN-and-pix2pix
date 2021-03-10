@@ -83,3 +83,11 @@ conda -> python3.6 env
 ---------------------------------------
 conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
 conda install -c conda-forge dominate
+conda install -c conda-forge opencv
+conda install -c anaconda tk
+conda install pyzmq
+
+
+coco
+---------------------------------------
+https://towardsdatascience.com/master-the-coco-dataset-for-semantic-image-segmentation-part-1-of-2-732712631047
