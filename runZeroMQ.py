@@ -24,6 +24,8 @@ socketSubscribe.setsockopt_string(zmq.SUBSCRIBE, "img")
 socketPublish = contextPublish.socket(zmq.PUB)
 socketPublish.bind("tcp://*:5556")
 
+model_image_size = 512
+
 if __name__ == '__main__':
     opt = TestOptions().parse()  # get test options
     # hard-code some parameters for test
@@ -35,18 +37,25 @@ if __name__ == '__main__':
     model = create_model(opt)      # create a model given opt.model and other options
     model.setup(opt)               # regular setup: load and print networks; create schedulers
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
-    blank_image = np.zeros((256, 256, 3), np.uint8)
+    blank_image = np.zeros((model_image_size, model_image_size, 3), np.uint8)
 
     while True:
         # ZMQ Subscribe convert incoming bytes to PIL and then to CVImage
         frame = socketSubscribe.recv()
         if len(frame) > 10:
-            pil_image = Image.frombytes('RGBA', (256, 256), frame, 'raw').convert('RGB')
+            pil_image = Image.frombytes('RGBA', (model_image_size, model_image_size), frame, 'raw').convert('RGB')
+
+            # learntest
+            #model.update_learning_rate()
 
             for i, data in enumerate(dataset):
                 if i >= opt.num_test:  # only apply our model to opt.num_test images.
                     break
                 model.set_input(data, pil_image)  # unpack data from data loader
+
+                # learntest
+                #model.optimize_parameters()
+
                 model.test()           # run inference
 
                 visuals = model.get_current_visuals()  # get image results
@@ -55,7 +64,8 @@ if __name__ == '__main__':
                     open_cv_image = numpy.array(im)
                     open_cv_image = open_cv_image[:, :, ::-1].copy()
                     blank_image = open_cv_image
-
+        #dim = (256,256)
+        #blank_image = cv2.resize(blank_image, dim, interpolation = cv2.INTER_AREA)
         socketPublish.send(blank_image)
         cv2.imshow("image", blank_image)
         cv2.waitKey(1)
