@@ -39,6 +39,10 @@ if __name__ == '__main__':
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
     blank_image = np.zeros((model_image_size, model_image_size, 3), np.uint8)
 
+    start_time = time.time()
+    x = 5  # displays the frame rate every 1 second
+    counter = 0
+
     while True:
         # ZMQ Subscribe convert incoming bytes to PIL and then to CVImage
         frame = socketSubscribe.recv()
@@ -69,3 +73,9 @@ if __name__ == '__main__':
         socketPublish.send(blank_image)
         cv2.imshow("image", blank_image)
         cv2.waitKey(1)
+
+        counter += 1
+        if (time.time() - start_time) > x:
+            print("FPS: ", counter / (time.time() - start_time))
+            counter = 0
+            start_time = time.time()
