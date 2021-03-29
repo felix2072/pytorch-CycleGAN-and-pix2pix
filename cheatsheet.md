@@ -13,7 +13,7 @@ secret = '06b99dbd62fd5552'
 
 get 100 images with the tag people
 ---------------------------------------
-python flickr_scraper.py --search 'people' --n 100 --download
+python flickr_scraper.py --search "vase minimalism" --n 100 --download
 
 
 
@@ -49,7 +49,7 @@ content of folder: slice
 mogrify -crop 256x256 -gravity East *.png 
 
 cyclegan and pix2pix
-
+---------------------------------------
 python -m visdom.server
 PS E:\work\ML\pytorch-CycleGAN-and-pix2pix> python train.py --dataroot ./datasets/people2vase --name invert_people2vase --model cycle_gan --n_epochs 2000 --save_epoch_freq 5 --continue_train --epoch_count 200
 PS E:\work\ML\pytorch-CycleGAN-and-pix2pix> python test.py --dataroot ./datasets/people2chair --name people2chair --model cycle_gan
@@ -81,7 +81,7 @@ def save_network(net, label, epoch, opt):
 
 conda -> python3.6 env
 ---------------------------------------
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
+conda install pytorch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2 cudatoolkit=10.1 -c pytorch
 conda install -c conda-forge dominate
 conda install -c conda-forge opencv
 conda install -c anaconda tk

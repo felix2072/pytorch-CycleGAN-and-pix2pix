@@ -48,5 +48,9 @@ test/.coverage
 test/data/legacy_serialized.pt
 *~
 .idea
-C4D/backup/
+C4D/
 *.hdr
+*.stl
+*.zip
+/C4D/3DStühle.c4d
+/C4D/3DVasen.c4d
