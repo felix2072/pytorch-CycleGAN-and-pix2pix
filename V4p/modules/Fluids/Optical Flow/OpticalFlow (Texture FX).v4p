@@ -1,0 +1,207 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha41.dtd" >
+   <PATCH nodename="C:\projects\grassi-streamline\modules\Fluids\Optical Flow\OpticalFlow (Texture FX).v4p" systemname="OpticalFlow (Texture FX)" filename="D:\MIO\Coding\vvvv\vvvvContributions\modules\Optical Flow\OpticalFlow (Texture FX).v4p" locked="0">
+   <BOUNDS type="Window" left="4500" top="1170" width="10665" height="7245">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="147" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="960" top="885" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="960" top="885" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture In|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="151" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3330" top="1365" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3330" top="1365" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" values="1.5,1.5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="poffsetXY">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="153" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6915" top="1395" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6915" top="1395" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="lambda">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="154" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="3252" top="5145" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3252" top="5145" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="165" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4755" top="1335" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4755" top="1335" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" values="1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="scaleXY">
+   </PIN>
+   </NODE>
+   <INFO author="prince mio" description="Optical Flow Solution for dx11 on GPU" tags="Computer Vision, cv, Optical Flow, GPU, dx11">
+   </INFO>
+   <NODE systemname="FrameDelay (DX11.Texture 2d)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FrameDelay (DX11.Texture 2d)" componentmode="Hidden" id="146">
+   <BOUNDS type="Node" left="4485" top="2520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="13140" top="3495" width="14235" height="12105">
+   </BOUNDS>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Flush" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Output Node" dstnodeid="146" dstpinname="Texture In" linkstyle="Bezier">
+   <LINKPOINT x="640" y="1720">
+   </LINKPOINT>
+   <LINKPOINT x="4865" y="1895">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="171" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5865" top="1335" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="1335" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" values="1,1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="directionXY">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="172" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9135" top="1800" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9135" top="1800" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <PACK Name="imagepack" Version="0.1.0">
+   </PACK>
+   <PACK Name="addonpack" Version="40.0.0">
+   </PACK>
+   <NODE systemname="MotionFlowCheck (DX11.TextureFX Compiled)" filename="texture11\MotionFlowCheck.tfxc" nodename="MotionFlowCheck (DX11.TextureFX Compiled)" componentmode="Hidden" id="148">
+   <BOUNDS type="Node" left="3255" top="4110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="PrevTex" visible="1">
+   </PIN>
+   <PIN pinname="ActualTex" visible="1">
+   </PIN>
+   <PIN pinname="texSizeXY" visible="1">
+   </PIN>
+   <PIN pinname="scaleXY" visible="1">
+   </PIN>
+   <PIN pinname="poffsetXY" visible="1">
+   </PIN>
+   <PIN pinname="lambda" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Default SizeXY" visible="-1" pintype="Input" slicecount="2" values="609,405">
+   </PIN>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="RB">
+   </PIN>
+   <PIN pinname="Sampler" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Path" slicecount="1" values="|E:\_Projects\Ceasars\Library\TheFlow\Fluids\Optical Flow\texture11\MotionFlowCheck.tfxc|">
+   </PIN>
+   <PIN pinname="Do Save" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Output Node" dstnodeid="148" dstpinname="ActualTex" linkstyle="Bezier">
+   <LINKPOINT x="950" y="2443">
+   </LINKPOINT>
+   <LINKPOINT x="4420" y="2763">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="151" srcpinname="Y Output Value" dstnodeid="148" dstpinname="poffsetXY" linkstyle="VHV">
+   <LINKPOINT x="3390" y="2938">
+   </LINKPOINT>
+   <LINKPOINT x="3600" y="3018">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Y Output Value" dstnodeid="148" dstpinname="lambda" linkstyle="VHV">
+   <LINKPOINT x="6720" y="2940">
+   </LINKPOINT>
+   <LINKPOINT x="4245" y="3030">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="165" srcpinname="Y Output Value" dstnodeid="148" dstpinname="scaleXY">
+   </LINK>
+   <LINK srcnodeid="148" srcpinname="Texture Out" dstnodeid="154" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="171" srcpinname="Y Output Value" dstnodeid="148" dstpinname="directionXY">
+   </LINK>
+   <LINK srcnodeid="146" srcpinname="Texture Out" dstnodeid="148" dstpinname="PrevTex">
+   </LINK>
+   <LINK srcnodeid="172" srcpinname="Y Output Value" dstnodeid="148" dstpinname="Enabled">
+   </LINK>
+   <PACK Name="dx11" Version="1.3.1">
+   </PACK>
+   <PACK Name="vvvv-ZeroMQ_Release_x64" Version="0.5.0">
+   </PACK>
+   <PACK Name="dx11.particles" Version="1.0.6">
+   </PACK>
+   </PATCH>
