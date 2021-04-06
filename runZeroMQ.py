@@ -3,13 +3,15 @@ from options.test_options import TestOptions
 from data import create_dataset
 from models import create_model
 from util import util
-
-import cv2
-import zmq
-import numpy
-from PIL import Image
-import numpy as np
 import time
+
+import zmq
+
+import numpy
+import numpy as np
+import cv2
+from PIL import Image
+
 
 # ZMQ
 context = zmq.Context()
@@ -26,7 +28,9 @@ socketPublish.bind("tcp://*:5556")
 
 model_image_size = 512
 
-if __name__ == '__main__':
+
+def main():
+
     opt = TestOptions().parse()  # get test options
     # hard-code some parameters for test
     opt.num_threads = 0   # test code only supports num_threads = 0
@@ -37,7 +41,7 @@ if __name__ == '__main__':
     model = create_model(opt)      # create a model given opt.model and other options
     model.setup(opt)               # regular setup: load and print networks; create schedulers
     dataset = create_dataset(opt)  # create a dataset given opt.dataset_mode and other options
-    blank_image = np.zeros((model_image_size, model_image_size, 3), np.uint8)
+    pix2pix_image = np.zeros((model_image_size, model_image_size, 3), np.uint8)
 
     start_time = time.time()
     x = 5  # displays the frame rate every 1 second
@@ -46,6 +50,7 @@ if __name__ == '__main__':
     while True:
         # ZMQ Subscribe convert incoming bytes to PIL and then to CVImage
         frame = socketSubscribe.recv()
+
         if len(frame) > 10:
             pil_image = Image.frombytes('RGBA', (model_image_size, model_image_size), frame, 'raw').convert('RGB')
 
@@ -67,11 +72,11 @@ if __name__ == '__main__':
                     im = util.tensor2im(im_data)
                     open_cv_image = numpy.array(im)
                     open_cv_image = open_cv_image[:, :, ::-1].copy()
-                    blank_image = open_cv_image
+                    pix2pix_image = open_cv_image
         #dim = (256,256)
         #blank_image = cv2.resize(blank_image, dim, interpolation = cv2.INTER_AREA)
-        socketPublish.send(blank_image)
-        cv2.imshow("image", blank_image)
+        socketPublish.send(pix2pix_image)
+        cv2.imshow("image", pix2pix_image)
         cv2.waitKey(1)
 
         counter += 1
@@ -79,3 +84,6 @@ if __name__ == '__main__':
             print("FPS: ", counter / (time.time() - start_time))
             counter = 0
             start_time = time.time()
+
+if __name__ == "__main__":
+    main()

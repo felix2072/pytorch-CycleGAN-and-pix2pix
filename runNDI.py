@@ -1,20 +1,21 @@
-from spout.sources import FileInputStream
-from spout.structs import Function, Predicate
-from spout.outputs import PrintOperation
+import time
 
 
-class StartsWithDigit(Predicate):
-    def test(self, obj):
-        return obj[0].is_digit()
+def print_fps(_frame_counter, _start_time, _seconds_to_wait):
+    _frame_counter += 1
+    if (time.time() - _start_time) > _seconds_to_wait:
+        print("Average FPS: ", _frame_counter / (time.time() - _start_time))
+        _frame_counter = 0
+        _start_time = time.time()
+    return _frame_counter, _start_time
 
 
-class StripFirstChar(Function):
-    def apply(self, input):
-        return input[1:]
+start_time = time.time()
+seconds_to_wait = 1
+frame_counter = 0
 
-
-s = FileInputStream("test.txt")
-s \
-    .filter(StartsWithDigit()) \
-    .map(StripFirstChar()) \
-    .for_each(PrintOperation())
+while True:
+    time.sleep(.01)
+    counter_and_time = print_fps(frame_counter, start_time, seconds_to_wait)
+    frame_counter = counter_and_time[0]
+    start_time = counter_and_time[1]
