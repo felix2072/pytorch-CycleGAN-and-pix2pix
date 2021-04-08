@@ -1,0 +1,73 @@
+//@author: vux
+//@help: template for texture fx
+//@tags: texture
+//@credits: 
+
+#include "ColorSpace.fxh"
+
+Texture2D texture2d : PREVIOUS;
+
+SamplerState linearSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+float2 range = float2(0,1);
+float gamma=1;
+
+float4 PS(psInput input) : SV_Target
+{
+	float4 c = texture2d.Sample(linearSampler,input.uv);
+	float v = RGBtoHSV(c.rgb).z;
+	
+	v = lerp(range.x,range.y,v);
+	v = pow(abs(v),gamma);
+	
+	c = float4(v,0,0,c.a);
+	
+	return c;
+}
+
+float4 PSStepped(psInput input) : SV_Target
+{
+	float4 c = texture2d.Sample(linearSampler,input.uv);
+	float v = RGBtoHSV(c.rgb).z;
+	
+	v = lerp(range.x,range.y,v);
+	v = pow(abs(v),gamma);
+
+	v = round(v);
+	
+	c = float4(v,0,0,c.a);
+	
+	return c;
+}
+
+
+technique10 Smooth
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+}
+
+
+technique10 Stepped
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PSStepped()));
+	}
+}
+
+
+
