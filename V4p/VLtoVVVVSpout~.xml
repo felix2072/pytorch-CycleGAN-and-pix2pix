@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
-   <PATCH nodename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\VLtoVVVVSpout.v4p" systemname="VLtoVVVVSpout" filename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\VLtoVVVVSpout.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="150" top="300" width="7500" height="7845">
+   <PATCH nodename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\VLtoVVVVSpout.v4p" systemname="VLtoVVVVSpout" filename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\VLtoVVVVSpout.v4p" scrollx="1110" scrolly="150">
+   <BOUNDS type="Window" left="150" top="300" width="7500" height="12750">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="6" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4947" top="9678" width="765" height="255">
@@ -145,9 +145,9 @@
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="8" dstpinname="Sender Name">
    </LINK>
    <NODE id="61" nodename="Spout (DX11.Texture Receiver)" componentmode="Hidden" systemname="Spout (DX11.Texture Receiver)" filename="%VVVV%\packs\dx11\nodes\modules\Spout (DX11.Texture Receiver).v4p">
-   <BOUNDS type="Node" left="6645" top="1035" width="100" height="100">
+   <BOUNDS type="Node" left="6675" top="915" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6645" top="1035" width="0" height="0">
+   <BOUNDS type="Box" left="6675" top="915" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Share Name" visible="1" slicecount="1" values="|Spout Demo Sender 64bit|">
    </PIN>
@@ -162,7 +162,7 @@
    </LINK>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="61" dstpinname="Force Update">
    </LINK>
-   <NODE id="92" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <NODE id="92" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="4335" top="9135" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4335" top="9135" width="6000" height="4500">
@@ -382,7 +382,7 @@
    </NODE>
    <LINK srcnodeid="141" srcpinname="Y Output Value" dstnodeid="144" dstpinname="Pause">
    </LINK>
-   <NODE systemname="Postproduction" filename="Postproduction.v4p" componentmode="Hidden" id="145" nodename="Postproduction.v4p" border="1">
+   <NODE systemname="Postproduction" filename="Postproduction.v4p" componentmode="InAWindow" id="145" nodename="Postproduction.v4p" border="1">
    <BOUNDS type="Node" left="4560" top="6915" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4560" top="6915" width="4800" height="4800">
@@ -465,7 +465,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="4680" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -688,9 +688,7 @@
    </LINK>
    <LINK srcnodeid="92" srcpinname="Texture Out" dstnodeid="8" dstpinname="Texture">
    </LINK>
-   <LINK srcnodeid="172" srcpinname="BW" dstnodeid="48" dstpinname="Data">
-   </LINK>
-   <NODE systemname="ParticleBrush" filename="ParticleBrush.v4p" nodename="ParticleBrush.v4p" componentmode="Hidden" id="173">
+   <NODE systemname="ParticleBrush" filename="ParticleBrush.v4p" nodename="ParticleBrush.v4p" componentmode="InAWindow" id="173">
    <BOUNDS type="Node" left="4995" top="3300" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
@@ -699,7 +697,7 @@
    </PIN>
    <PIN pinname="Radius" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="300" top="8805" width="7155" height="6585">
+   <BOUNDS type="Window" left="240" top="3060" width="6990" height="9600">
    </BOUNDS>
    <PIN pinname="BGColor" visible="1">
    </PIN>
@@ -732,20 +730,16 @@
    </NODE>
    <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="175" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="175" srcpinname="Layer" dstnodeid="92" dstpinname="Layers">
-   </LINK>
    <NODE systemname="AsImage (DX11.Texture2D)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.40.0.0\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="AsImage (DX11.Texture2D)" componentmode="Hidden" id="181">
-   <BOUNDS type="Node" left="6660" top="1410" width="100" height="100">
+   <BOUNDS type="Node" left="6690" top="1290" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6660" top="1410" width="3000" height="3000">
+   <BOUNDS type="Box" left="6690" top="1290" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="181" srcpinname="Output" dstnodeid="172" dstpinname="Image">
-   </LINK>
    <LINK srcnodeid="61" srcpinname="Texture" dstnodeid="181" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="183">
@@ -765,5 +759,11 @@
    <LINK srcnodeid="100" srcpinname="Output" dstnodeid="173" dstpinname="BGColor">
    </LINK>
    <LINK srcnodeid="173" srcpinname="Texture Out" dstnodeid="175" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="181" srcpinname="Output" dstnodeid="172" dstpinname="Image">
+   </LINK>
+   <LINK srcnodeid="172" srcpinname="BW" dstnodeid="48" dstpinname="Data">
+   </LINK>
+   <LINK srcnodeid="175" srcpinname="Layer" dstnodeid="92" dstpinname="Layers">
    </LINK>
    </PATCH>

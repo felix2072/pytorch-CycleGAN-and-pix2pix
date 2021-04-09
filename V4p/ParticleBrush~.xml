@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha41.dtd" >
-   <PATCH nodename="C:\projects\grassi-streamline\ParticleBrush.v4p" systemname="ParticleBrush" filename="C:\projects\grassi-streamline\ParticleBrush.v4p" scrollx="760" scrolly="0" locked="0">
-   <BOUNDS type="Window" left="9050" top="190" width="21340" height="17700">
+   <PATCH nodename="C:\projects\grassi-streamline\ParticleBrush.v4p" systemname="ParticleBrush" filename="C:\projects\grassi-streamline\ParticleBrush.v4p" scrollx="0" scrolly="0" locked="0">
+   <BOUNDS type="Window" left="7490" top="200" width="21340" height="17700">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -831,7 +831,7 @@
    <NODE id="1038" systemname="ParticleGenerator" filename="modules\ParticleGenerator.v4p" nodename="modules\ParticleGenerator.v4p" componentmode="InAWindow">
    <PIN pinname="Layer Out" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="9050" top="190" width="21340" height="17700">
+   <BOUNDS type="Window" left="7490" top="200" width="21340" height="17700">
    </BOUNDS>
    <PIN pinname="StateTexture" visible="1" slicecount="1" values="||">
    </PIN>
