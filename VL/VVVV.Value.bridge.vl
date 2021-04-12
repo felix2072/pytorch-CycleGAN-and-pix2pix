@@ -28,12 +28,13 @@
             <Pin Id="KmiT99yrtbbOFk74yZTQ1H" Name="BW" Kind="OutputPin" />
             <Pin Id="BDzvFsXbEmkOyBJEeySRNO" Name="Edge" Kind="OutputPin" />
             <Pin Id="AevpPl85zkmQPbFUPCOj62" Name="Image Folder" Kind="InputPin" Bounds="806,283" />
+            <Pin Id="T9gCSfTpJPAMIn0cMAZzGb" Name="Object Color" Kind="InputPin" Bounds="1538,354" />
           </Patch>
           <Canvas Id="C4yd3S6BFv9NWqJ2WO3OFi" CanvasType="Group">
-            <ControlPoint Id="VOm4cxNKmywNMHlrFVH8m6" Bounds="1243,475" />
-            <ControlPoint Id="DWk7KH6R6yKMldzgcpw3Y5" Bounds="1130,-77" />
-            <ControlPoint Id="LhkokqPdMeOM0rUzfKtRmK" Bounds="1218,-78" />
-            <Node Bounds="1081,92,166,19" Id="LO7gOZvZs6JOTCP5PwWoci">
+            <ControlPoint Id="VOm4cxNKmywNMHlrFVH8m6" Bounds="1649,465" />
+            <ControlPoint Id="DWk7KH6R6yKMldzgcpw3Y5" Bounds="1538,-80" />
+            <ControlPoint Id="LhkokqPdMeOM0rUzfKtRmK" Bounds="1626,-81" />
+            <Node Bounds="1489,89,166,19" Id="LO7gOZvZs6JOTCP5PwWoci">
               <p:NodeReference LastCategoryFullName="Grassi" LastSymbolSource="VVVV.Value.bridge.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="RealSenseToCvImage" />
@@ -47,7 +48,7 @@
               <Pin Id="PAz8i2rA5QRNQKV4VlovRI" Name="Background" Kind="OutputPin" />
               <Pin Id="Uwijtm7TbX3LBOyej7h93Y" Name="Outline" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1224,263,65,19" Id="ReGZpdL6RUmLRs7TQX3Keb">
+            <Node Bounds="1630,253,65,19" Id="ReGZpdL6RUmLRs7TQX3Keb">
               <p:NodeReference LastCategoryFullName="OpenCV.Filter" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Threshold" />
@@ -63,7 +64,7 @@
               <Pin Id="EisKVlSDWmSMjebTDCoSVW" Name="Apply" Kind="InputPin" />
               <Pin Id="GdgMkvYa2CgNqVMABi794t" Name="Output" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1231,369,149,19" Id="G9ASlJiEJlJM3zpoOLkFhM">
+            <Node Bounds="1637,359,149,19" Id="G9ASlJiEJlJM3zpoOLkFhM">
               <p:NodeReference LastCategoryFullName="Grassi" LastSymbolSource="VVVV.Value.bridge.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="ColorizeOjectAndBackground" />
@@ -83,7 +84,7 @@
               </Pin>
               <Pin Id="KNfCkbsrv3vOj7nfVWdP7k" Name="CvImage" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1140,367,67,19" Id="OsKT4agpfofLmlx3ozXjuh">
+            <Node Bounds="1546,357,67,19" Id="OsKT4agpfofLmlx3ozXjuh">
               <p:NodeReference LastCategoryFullName="Grassi" LastSymbolSource="VVVV.Value.bridge.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="MaskEdges" />
@@ -99,7 +100,7 @@
             </Node>
             <Pad Id="Kk7rOcZuEbSLmhyXrBhlX8" SlotId="Bzf02o4KsHwN8YiKD3VOUK" Bounds="1396,-151" />
             <Pad Id="MYCUieg1FpyOXMIDLrtvaw" SlotId="EOXi2TT5j6uPK8Ekea04ni" Bounds="1503,-150" />
-            <Node Bounds="1140,259,45,19" Id="BUe23gGAsrIOffWRArVyts">
+            <Node Bounds="1546,249,45,19" Id="BUe23gGAsrIOffWRArVyts">
               <p:NodeReference LastCategoryFullName="OpenCV.Filter" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Add" />
@@ -110,8 +111,8 @@
               <Pin Id="AN5wbbHxhOdOcIzaWGo3tL" Name="Apply" Kind="InputPin" />
               <Pin Id="QMBXpoEzDoiOnwHonERsX9" Name="Output" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="AcA9aTRRu7lL0u4wa5WD49" Bounds="1175,270" />
-            <Node Bounds="1495,388,105,19" Id="StagMNce1BAMFfSivgCEGF">
+            <ControlPoint Id="AcA9aTRRu7lL0u4wa5WD49" Bounds="1581,260" />
+            <Node Bounds="1260,373,105,19" Id="StagMNce1BAMFfSivgCEGF">
               <p:NodeReference LastCategoryFullName="Grassi" LastSymbolSource="runZeroMQ.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Grassi" />
@@ -137,7 +138,7 @@
               </Pin>
               <Pin Id="H7Yv420Yb8OQMLmIfq26Ae" Name="Output" Kind="OutputPin" />
             </Node>
-            <Node Bounds="1243,430,56,19" Id="Pa71RfSpQmjPhQJItjV7Gi">
+            <Node Bounds="1649,420,56,19" Id="Pa71RfSpQmjPhQJItjV7Gi">
               <p:NodeReference LastCategoryFullName="OpenCV.Conversion" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="ToImage" />
@@ -150,8 +151,8 @@
               <Pin Id="JClzdc2jwcxN01jgSKp6cP" Name="Output" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="I1VY1szCHuvPspt2dZKi4o" Bounds="1423,-244" />
-            <ControlPoint Id="Bv9BVzeti9pOBaeEPvUg5I" Bounds="1506,324" />
-            <Node Bounds="806,361,130,19" Id="Tf9L9dwcULTP0MHsV6IPXA">
+            <ControlPoint Id="Bv9BVzeti9pOBaeEPvUg5I" Bounds="1248,334" />
+            <Node Bounds="1091,340,130,19" Id="Tf9L9dwcULTP0MHsV6IPXA">
               <p:NodeReference LastCategoryFullName="Grassi" LastSymbolSource="VVVV.Value.bridge.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="LoadCVImageFromFolder" />
@@ -171,8 +172,8 @@
               <Pin Id="JIVDCyjKmMnQdBeYprDoc8" Name="Height" Kind="InputPin" />
               <Pin Id="GM5PVtQTLCRO6ZK5E09Cqc" Name="CvImage" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="Pl1BiIs8qbzPVzsadA3c4y" Bounds="864,312" />
-            <Pad Id="BsqfZFcVuNyP5izmZMJxwx" Bounds="1378,258,58,19" ShowValueBox="true" isIOBox="true" Value="848484">
+            <ControlPoint Id="Pl1BiIs8qbzPVzsadA3c4y" Bounds="1149,291" />
+            <Pad Id="BsqfZFcVuNyP5izmZMJxwx" Bounds="1784,248,58,19" ShowValueBox="true" isIOBox="true" Value="848484">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -181,7 +182,7 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="Dw3lzeDO2p6M5mxR58fHjv" Bounds="1392,282,53,19" ShowValueBox="true" isIOBox="true" Value="4c4c4c">
+            <Pad Id="Dw3lzeDO2p6M5mxR58fHjv" Bounds="1798,272,53,19" ShowValueBox="true" isIOBox="true" Value="4c4c4c">
               <p:TypeAnnotation>
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -190,7 +191,7 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Node Bounds="1210,201,65,19" Id="JVNH42hrc7YOGCOZ6My5Ej">
+            <Node Bounds="1616,191,65,19" Id="JVNH42hrc7YOGCOZ6My5Ej">
               <p:NodeReference LastCategoryFullName="OpenCV.Filter" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Blur" />
@@ -202,13 +203,13 @@
               <Pin Id="Q9e8sOWWa1WMVdudCBgnAu" Name="Apply" Kind="InputPin" />
               <Pin Id="Ej0Vx2L8xPYP69uSLqXJXt" Name="Output" Kind="OutputPin" />
             </Node>
-            <Pad Id="VcB9SeP23UOPRK47577Lsq" Comment="Width" Bounds="1237,174,35,15" ShowValueBox="true" isIOBox="true" Value="9">
+            <Pad Id="VcB9SeP23UOPRK47577Lsq" Comment="Width" Bounds="1643,164,35,15" ShowValueBox="true" isIOBox="true" Value="9">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Integer32" />
               </p:TypeAnnotation>
             </Pad>
-            <ControlPoint Id="QQHE1BlNT5mM2CFYNGQxPt" Bounds="1088,480" />
-            <Node Bounds="1082,434,56,19" Id="Kt3gw6UeHpsLPGYqxKFVnE">
+            <ControlPoint Id="QQHE1BlNT5mM2CFYNGQxPt" Bounds="1494,470" />
+            <Node Bounds="1488,424,56,19" Id="Kt3gw6UeHpsLPGYqxKFVnE">
               <p:NodeReference LastCategoryFullName="OpenCV.Conversion" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="ToImage" />
@@ -220,8 +221,8 @@
               <Pin Id="FHPmBtysO4iM7xLfRxmmxc" Name="Pixel Format" Kind="InputPin" />
               <Pin Id="Hs92ykSYb3qPy4keX1MFvk" Name="Output" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="QUrIuEZbiIWM6GoCMzCfSN" Bounds="811,460" />
-            <Node Bounds="805,414,56,19" Id="SnTdnvvFakGOtfVhLl4zk6">
+            <ControlPoint Id="QUrIuEZbiIWM6GoCMzCfSN" Bounds="1096,439" />
+            <Node Bounds="1090,393,56,19" Id="SnTdnvvFakGOtfVhLl4zk6">
               <p:NodeReference LastCategoryFullName="OpenCV.Conversion" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="ToImage" />
@@ -233,8 +234,8 @@
               <Pin Id="Kd8n9JP90DbOYJf30KvsDA" Name="Pixel Format" Kind="InputPin" />
               <Pin Id="O3g6gsyrEpHLlyXRaDkMmw" Name="Output" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="Q9kjmc0A0XmNaY1l1eQhMZ" Bounds="1504,469" />
-            <Node Bounds="1498,425,56,19" Id="DFFDJb7B3OFLR2cft4ZzhY">
+            <ControlPoint Id="Q9kjmc0A0XmNaY1l1eQhMZ" Bounds="1269,454" />
+            <Node Bounds="1263,410,56,19" Id="DFFDJb7B3OFLR2cft4ZzhY">
               <p:NodeReference LastCategoryFullName="OpenCV.Conversion" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="ToImage" />
@@ -246,8 +247,8 @@
               <Pin Id="ME3LZYCa7iTOXp60IX31Xf" Name="Pixel Format" Kind="InputPin" />
               <Pin Id="Nti1lGAsNauQVCsTx59FJy" Name="Output" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="MNKA7rEkYFsMbTTBGUquFU" Bounds="1161,479" />
-            <Node Bounds="1155,427,56,19" Id="PLRufoidu4FLEzVcZ0GnNS">
+            <ControlPoint Id="MNKA7rEkYFsMbTTBGUquFU" Bounds="1567,469" />
+            <Node Bounds="1561,417,56,19" Id="PLRufoidu4FLEzVcZ0GnNS">
               <p:NodeReference LastCategoryFullName="OpenCV.Conversion" LastSymbolSource="VL.OpenCV.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="ToImage" />
@@ -259,8 +260,8 @@
               <Pin Id="D0qexQz9yQZPAwdQENNAcs" Name="Pixel Format" Kind="InputPin" />
               <Pin Id="FB117sZaTayLlFb321jwNi" Name="Output" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="DEFqFPrOVNsLGmKQDbEFfn" Bounds="806,283" />
-            <Node Bounds="829,325" Id="HsEViGoyn75LXziowmgYj3">
+            <ControlPoint Id="DEFqFPrOVNsLGmKQDbEFfn" Bounds="1091,262" />
+            <Node Bounds="1114,304,57,19" Id="HsEViGoyn75LXziowmgYj3">
               <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                 <Choice Kind="ProcessAppFlag" Name="Changed" />
@@ -269,6 +270,7 @@
               <Pin Id="AiUXf2teF1FOjLvPmSRljk" Name="Result" Kind="OutputPin" />
               <Pin Id="UtbjB2HadFCLo8GmOcgpPA" Name="Unchanged" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="QLMmkU04GE9ONRzlKRuRVC" Bounds="1301,337" />
           </Canvas>
           <ProcessDefinition Id="FHNLl8GWgcVOJzRkkPI83E">
             <Fragment Id="MRFnVwHDf0WOO7H3jKbCxI" Patch="ESJZDDS0I02LAWDOx9RJVV" Enabled="true" />
@@ -331,6 +333,8 @@
           <Link Id="NGNlsKkHqutPP1ETjkWXzC" Ids="AevpPl85zkmQPbFUPCOj62,DEFqFPrOVNsLGmKQDbEFfn" IsHidden="true" />
           <Link Id="BTkn3tPNyeOQOJbiBJkFYE" Ids="DEFqFPrOVNsLGmKQDbEFfn,JhahnvOQyLdPGjriAekF4K" />
           <Link Id="GbNT5y1McmtOUXHIpMEj7U" Ids="AiUXf2teF1FOjLvPmSRljk,Erx8jsxFVHWMC8q1zvqsbI" />
+          <Link Id="I9LYYsbJJJPOABiFFKQZl1" Ids="QLMmkU04GE9ONRzlKRuRVC,U04LkSb7EM0NGV3IGmltxv" />
+          <Link Id="UJWl98hSAOnLp2ngPwvvn2" Ids="T9gCSfTpJPAMIn0cMAZzGb,QLMmkU04GE9ONRzlKRuRVC" IsHidden="true" />
         </Patch>
       </Node>
       <!--
@@ -2380,7 +2384,7 @@
                 <CategoryReference Kind="Category" Name="Skia" />
                 <Choice Kind="ProcessAppFlag" Name="Renderer" />
               </p:NodeReference>
-              <Pin Id="KoSa4AIjz16MNP4fw0zrqy" Name="Bounds" Kind="InputPin" DefaultValue="366, 74, 1431, 745">
+              <Pin Id="KoSa4AIjz16MNP4fw0zrqy" Name="Bounds" Kind="InputPin" DefaultValue="1164, 626, 730, 398">
                 <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
                   <Choice Kind="TypeFlag" Name="Rectangle" />
                 </p:TypeAnnotation>

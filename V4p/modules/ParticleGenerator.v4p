@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
-   <PATCH nodename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\modules\ParticleGenerator.v4p" scrollx="6720" scrolly="14985" systemname="ParticleGenerator" filename="C:\projects\grassi-streamline\modules\ParticleGenerator.v4p">
+   <PATCH nodename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\modules\ParticleGenerator.v4p" scrollx="10545" scrolly="8025" systemname="ParticleGenerator" filename="C:\projects\grassi-streamline\modules\ParticleGenerator.v4p">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1769" top="32455" width="1290" height="240">
    </BOUNDS>
@@ -672,7 +672,7 @@
    <LINKPOINT x="17846" y="6755">
    </LINKPOINT>
    </LINK>
-   <BOUNDS type="Window" left="1080" top="1845" width="15090" height="11400">
+   <BOUNDS type="Window" left="-19890" top="270" width="19545" height="15285">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -2585,7 +2585,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="19260" top="17625" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

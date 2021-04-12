@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta40.dtd" >
-   <PATCH nodename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\modules\ParticleGenerator.v4p" scrollx="2880" scrolly="17400" systemname="ParticleGenerator" filename="C:\projects\grassi-streamline\modules\ParticleGenerator.v4p">
+   <PATCH nodename="D:\Felix\felix-pytorch-CycleGAN-and-pix2pix\V4p\modules\ParticleGenerator.v4p" scrollx="6720" scrolly="14985" systemname="ParticleGenerator" filename="C:\projects\grassi-streamline\modules\ParticleGenerator.v4p">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1769" top="32455" width="1290" height="240">
    </BOUNDS>
@@ -459,7 +459,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9824" top="17772" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2,4">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="20,20">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -672,7 +672,7 @@
    <LINKPOINT x="17846" y="6755">
    </LINKPOINT>
    </LINK>
-   <BOUNDS type="Window" left="1455" top="13485" width="15090" height="11400">
+   <BOUNDS type="Window" left="1080" top="1845" width="15090" height="11400">
    </BOUNDS>
    <PACK Name="dx11" Version="1.3.1">
    </PACK>
@@ -777,11 +777,11 @@
    <LINK srcnodeid="141" srcpinname="Color Output" dstnodeid="135" dstpinname="Data">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="142">
-   <BOUNDS type="Box" left="15665" top="19760" width="800" height="240">
+   <BOUNDS type="Box" left="15665" top="19640" width="800" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="15665" top="19760" width="0" height="0">
+   <BOUNDS type="Node" left="15665" top="19640" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.82">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.86">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1832,8 +1832,6 @@
    </LINK>
    <LINK srcnodeid="247" srcpinname="Modifier Out" dstnodeid="278" dstpinname="Layer 4">
    </LINK>
-   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="55" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="284" srcpinname="Layer" dstnodeid="278" dstpinname="Layer 5">
    </LINK>
    <LINK srcnodeid="382" srcpinname="Texture Out" dstnodeid="113" dstpinname="State Texture">
@@ -2018,8 +2016,6 @@
    <LINKPOINT x="10520" y="20790">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="427" srcpinname="Layer" dstnodeid="55" dstpinname="Layer 2">
-   </LINK>
    <NODE id="428" systemname="DynamicBuffer (DX11.Buffer 3d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer 3d)" componentmode="Hidden">
    <BOUNDS type="Node" left="10130" top="22520" width="100" height="100">
    </BOUNDS>
@@ -2033,11 +2029,11 @@
    <LINK srcnodeid="428" srcpinname="Buffer" dstnodeid="427" dstpinname="Force Buffer">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="429">
-   <BOUNDS type="Box" left="10170" top="21510" width="800" height="720">
+   <BOUNDS type="Box" left="10035" top="21480" width="800" height="720">
    </BOUNDS>
-   <BOUNDS type="Node" left="10170" top="21510" width="0" height="0">
+   <BOUNDS type="Node" left="10035" top="21480" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.04,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0.4,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -2625,7 +2621,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.12">
+   <PIN pinname="Input 2" slicecount="1" values="0.14">
    </PIN>
    </NODE>
    <LINK srcnodeid="156" srcpinname="Output" dstnodeid="521" dstpinname="Input 1">
@@ -2690,10 +2686,10 @@
    </NODE>
    <LINK srcnodeid="531" srcpinname="Y Output Value" dstnodeid="526" dstpinname="Reload">
    </LINK>
-   <LINK srcnodeid="524" srcpinname="Output" dstnodeid="305" dstpinname="Geometry">
-   </LINK>
    <LINK srcnodeid="461" srcpinname="XYZ" dstnodeid="279" dstpinname="DataXYZ">
    </LINK>
    <LINK srcnodeid="461" srcpinname="XYZ" dstnodeid="282" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="296" srcpinname="Geometry Out" dstnodeid="305" dstpinname="Geometry">
    </LINK>
    </PATCH>
