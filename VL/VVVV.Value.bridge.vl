@@ -22,11 +22,12 @@
             <Pin Id="PeybW0utwjQPUrZif9JXqy" Name="Max Distance" Kind="InputPin" Bounds="411,259" />
             <Pin Id="RZSSNarGC4uOZf6wPm4KGm" Name="Size" Kind="InputPin" Bounds="1122,-347" />
             <Pin Id="IIOkl7MEimOMPc0YNgwUok" Name="Image" Kind="InputPin" />
-            <Pin Id="KH684sshhSwOPNisuR7KOr" Name="Index 2" Kind="InputPin" Bounds="790,280" />
+            <Pin Id="KH684sshhSwOPNisuR7KOr" Name="Index" Kind="InputPin" Bounds="790,280" />
             <Pin Id="HSd0EgqcAveNvSQ99JWnS0" Name="Test Images" Kind="OutputPin" />
             <Pin Id="HZBik6TgZMGOs4zee6MuCI" Name="RGB" Kind="OutputPin" />
             <Pin Id="KmiT99yrtbbOFk74yZTQ1H" Name="BW" Kind="OutputPin" />
             <Pin Id="BDzvFsXbEmkOyBJEeySRNO" Name="Edge" Kind="OutputPin" />
+            <Pin Id="AevpPl85zkmQPbFUPCOj62" Name="Image Folder" Kind="InputPin" Bounds="806,283" />
           </Patch>
           <Canvas Id="C4yd3S6BFv9NWqJ2WO3OFi" CanvasType="Group">
             <ControlPoint Id="VOm4cxNKmywNMHlrFVH8m6" Bounds="1243,475" />
@@ -258,6 +259,16 @@
               <Pin Id="D0qexQz9yQZPAwdQENNAcs" Name="Pixel Format" Kind="InputPin" />
               <Pin Id="FB117sZaTayLlFb321jwNi" Name="Output" Kind="OutputPin" />
             </Node>
+            <ControlPoint Id="DEFqFPrOVNsLGmKQDbEFfn" Bounds="806,283" />
+            <Node Bounds="829,325" Id="HsEViGoyn75LXziowmgYj3">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="Changed" />
+              </p:NodeReference>
+              <Pin Id="JhahnvOQyLdPGjriAekF4K" Name="Value" Kind="InputPin" />
+              <Pin Id="AiUXf2teF1FOjLvPmSRljk" Name="Result" Kind="OutputPin" />
+              <Pin Id="UtbjB2HadFCLo8GmOcgpPA" Name="Unchanged" Kind="OutputPin" />
+            </Node>
           </Canvas>
           <ProcessDefinition Id="FHNLl8GWgcVOJzRkkPI83E">
             <Fragment Id="MRFnVwHDf0WOO7H3jKbCxI" Patch="ESJZDDS0I02LAWDOx9RJVV" Enabled="true" />
@@ -316,6 +327,10 @@
           <Link Id="QjEHSMx7ap6LGBvUzHbAdF" Ids="FB117sZaTayLlFb321jwNi,MNKA7rEkYFsMbTTBGUquFU" />
           <Link Id="PdeQQmhiS4pMGpCFU3ItJC" Ids="MNKA7rEkYFsMbTTBGUquFU,BDzvFsXbEmkOyBJEeySRNO" IsHidden="true" />
           <Link Id="NzMCjDnpfZzOrOKnblURuy" Ids="CSK4n6yfAnvOy1u2zSK0ne,DY6HrnYN0YzOrXYrNo30gz" />
+          <Link Id="HrUzDUkOUekNkVws9mYxB9" Ids="DEFqFPrOVNsLGmKQDbEFfn,AHvnz0riGHcOKgzN5oPWT9" />
+          <Link Id="NGNlsKkHqutPP1ETjkWXzC" Ids="AevpPl85zkmQPbFUPCOj62,DEFqFPrOVNsLGmKQDbEFfn" IsHidden="true" />
+          <Link Id="BTkn3tPNyeOQOJbiBJkFYE" Ids="DEFqFPrOVNsLGmKQDbEFfn,JhahnvOQyLdPGjriAekF4K" />
+          <Link Id="GbNT5y1McmtOUXHIpMEj7U" Ids="AiUXf2teF1FOjLvPmSRljk,Erx8jsxFVHWMC8q1zvqsbI" />
         </Patch>
       </Node>
       <!--
